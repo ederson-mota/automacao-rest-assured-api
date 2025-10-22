@@ -1,0 +1,11 @@
+{
+  "firstname": "Edinho",
+  "lastname": "Mota",
+  "totalprice": 2500,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2025-11-01",
+    "checkout": "2025-12-25"
+  },
+  "additionalneeds": "Breakfast and Dinner"
+}
