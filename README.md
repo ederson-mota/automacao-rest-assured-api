@@ -55,3 +55,19 @@ AutoApiJavaRest/
 └── README.md                        → documentação do projeto (explicação e instruções)
 
 ```
+
+🧪 Execução de Testes
+Comando	Descrição
+mvn test	Executa todas as classes de teste do projeto.
+mvn -Dtest=BookingTest test	Executa todos os testes dentro da classe BookingTest.
+mvn -Dtest=BookingTest#cadastrarReserva test	Executa somente o método de teste específico cadastrarReserva() dentro da classe BookingTest.
+mvn test -Dgroups=NomeDoGrupo	Executa testes agrupados por tag definidos com @Tag("NomeDoGrupo") no JUnit 5.
+
+📊 Geração de Relatórios (Allure Reports)
+Comando	Descrição
+mvn allure:report	Gera os relatórios Allure na pasta target/site/allure-maven-plugin.
+mvn allure:serve	Gera e abre automaticamente o relatório Allure em um servidor local (visual interativo).
+
+🧹 Limpeza e Reexecução
+Comando	Descrição
+mvn clean test	Limpa os arquivos antigos do diretório target e executa novamente todos os testes.
