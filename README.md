@@ -55,7 +55,7 @@ AutoApiJavaRest/
 └── README.md                        → documentação do projeto (explicação e instruções)
 
 ```
-
+```
 🧪 Execução de Testes
 Comando	Descrição
 mvn test	Executa todas as classes de teste do projeto.
@@ -71,3 +71,4 @@ mvn allure:serve	Gera e abre automaticamente o relatório Allure em um servidor 
 🧹 Limpeza e Reexecução
 Comando	Descrição
 mvn clean test	Limpa os arquivos antigos do diretório target e executa novamente todos os testes.
+```
