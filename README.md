@@ -10,3 +10,13 @@ Este projeto foi desenvolvido para praticar automação de testes de API REST ut
 - Allure Framework  
 
 ## 🧩 Estrutura do Projeto
+AutoApiJavaRestGitAct/
+├── pom.xml
+├── src/
+│   ├── test/
+│   │   ├── java/
+│   │   │   └── BookingTest.java
+│   │   └── resources/
+│   │       └── payloads/
+│   │           └── reserva.json
+└── target/
