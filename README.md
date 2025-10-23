@@ -11,24 +11,47 @@ Este projeto foi desenvolvido para praticar automação de testes de API REST ut
 
 ## 🧩 Estrutura do Projeto
 ```
-AutoApiJavaRestGitAct/
+src/
 AutoApiJavaRest/
-├── pom.xml
-├── README.md
+│
+├── .allure/                         → cache local do Allure (gerado automaticamente)
+│
+├── .github/
+│   └── workflows/
+│       └── teste.yaml               → workflow GitHub Actions (CI/CD, executa os testes automaticamente)
+│
+├── .idea/                           → configurações do IntelliJ (IDE)
+│
+├── .mvn/                            → scripts e configs do Maven wrapper (caso usado)
+│
 ├── src/
-│   ├── test/
-│   │   ├── java/
-│   │   │   └── br.com.ederson.tests/
-│   │   │       ├── BookingTest.java
-│   │   │       └── TokenTest.java
-│   │   └── resources/
-│   │       ├── payloads/
-│   │       │   └── reserva.json
-│   │       └── config/
-│   │           └── environment.properties
-├── .mvn/
-├── .idea/ (se estiver usando IntelliJ)
-├── target/
-└── reports/
-    └── allure-report/
+│   ├── main/                        → código-fonte da aplicação (opcional em testes)
+│   │   ├── java/                    → aqui iriam classes auxiliares, helpers ou models
+│   │   └── resources/               → configs globais, ex: application.properties
+│   │
+│   └── test/                        → foco dos testes automatizados (JUnit + RestAssured)
+│       ├── java/
+│       │   └── BookingTest.java     → classe principal de teste (ex: POST, GET, PUT, DELETE)
+│       │
+│       └── resources/
+│           └── payloads/
+│               └── reserva.json     → corpo JSON usado nas requisições (payload)
+│
+├── target/                          → pasta de build do Maven (gerada após mvn test)
+│   ├── allure-results/              → resultados brutos de testes (usado pelo Allure)
+│   ├── surefire-reports/            → logs e relatórios do JUnit/Maven
+│   ├── test-classes/                → classes compiladas de teste
+│   └── ...                          → outras pastas de saída geradas
+│
+├── .gitignore                       → ignora arquivos temporários (target/, .idea/, etc.)
+│
+├── pom.xml                          → coração do projeto Maven ❤️
+│                                     - Define as dependências:
+│                                        🧱 RestAssured (testes de API)
+│                                        🧪 JUnit 5 (framework de testes)
+│                                        📊 Allure (relatórios)
+│                                        🧩 Hamcrest / Jackson / etc
+│
+└── README.md                        → documentação do projeto (explicação e instruções)
+
 ```
