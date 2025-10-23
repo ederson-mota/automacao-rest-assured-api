@@ -1,4 +1,5 @@
 import io.restassured.RestAssured;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -7,8 +8,15 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.core.Is.is;
 
-// Executar teste via terminal = mvn test /  mvn clean test
-// Comandos para Gerar report no terminal = mvn allure:repot depois mvn allure:serve
+// Comandos de execução via terminal
+// Executa todas as classes = "mvn test"
+// Executa todos os testes da classe  "mvn-Dtest=BookingTest test"
+// Executa teste especifico na classe "mvn -Dtest=BookingTest#cadastrarReserva test"
+// Executar testes agrupados por tag (com JUnit5) @Tag("NomeTag") "mvn test -Dgooup=NomeDoGrupo"
+// Comandos para Gerar report no terminal = "mvn allure:repot" depois "mvn allure:serve"
+// Usar depois de gerar relatorio ou executar teste "mvn clean test"
+
+
 
 public class BookingTest {
 
@@ -53,6 +61,7 @@ public class BookingTest {
                 .body("additionalneeds", equalTo("Breakfast and Dinner"));
     }
 
+    @Tag("Reserva")
     @Test
     public void cadastrarReserva() throws IOException {
         RestAssured.baseURI = "https://restful-booker.herokuapp.com";

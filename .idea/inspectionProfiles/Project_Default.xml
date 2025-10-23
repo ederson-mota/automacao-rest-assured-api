@@ -7,16 +7,22 @@
         <list>
           <option value="JavaApiQazando" />
           <option value="JavaApiQazando" />
+          <option value="AutoApiJavaRestGitAct" />
+          <option value="AutoApiJavaRestGitAct" />
         </list>
       </option>
       <option name="ignoredPackages">
         <list>
           <option value="commons-codec:commons-codec:1.11" />
           <option value="org.apache.commons:commons-lang3:3.11" />
+          <option value="org.apache.commons:commons-lang3:3.11" />
+          <option value="commons-codec:commons-codec:1.11" />
         </list>
       </option>
       <option name="ignoredReasons">
         <list>
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
           <option value="Not exploitable" />
           <option value="Not exploitable" />
         </list>
