@@ -10,7 +10,7 @@ Este projeto foi desenvolvido para praticar automação de testes de API REST ut
 - Allure Framework  
 
 ## 🧩 Estrutura do Projeto
-'''
+´´´
 AutoApiJavaRestGitAct/
 AutoApiJavaRest/
 ├── pom.xml
@@ -31,4 +31,4 @@ AutoApiJavaRest/
 ├── target/
 └── reports/
     └── allure-report/
-'''
+´´´
