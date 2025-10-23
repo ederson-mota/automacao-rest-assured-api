@@ -11,12 +11,22 @@ Este projeto foi desenvolvido para praticar automação de testes de API REST ut
 
 ## 🧩 Estrutura do Projeto
 AutoApiJavaRestGitAct/
+AutoApiJavaRest/
 ├── pom.xml
+├── README.md
 ├── src/
 │   ├── test/
 │   │   ├── java/
-│   │   │   └── BookingTest.java
+│   │   │   └── br.com.ederson.tests/
+│   │   │       ├── BookingTest.java
+│   │   │       └── TokenTest.java
 │   │   └── resources/
-│   │       └── payloads/
-│   │           └── reserva.json
-└── target/
+│   │       ├── payloads/
+│   │       │   └── reserva.json
+│   │       └── config/
+│   │           └── environment.properties
+├── .mvn/
+├── .idea/ (se estiver usando IntelliJ)
+├── target/
+└── reports/
+    └── allure-report/
